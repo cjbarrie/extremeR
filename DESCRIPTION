@@ -1,0 +1,40 @@
+Package: extremeR
+Title: A Bayesian Case-Control Approach for Analyzing Extreme Behavior
+Version: 0.0.0.9000
+Authors@R: 
+    c(person(given = "Christopher",
+           family = "Barrie",
+           role = c("aut", "cre"),
+           email = "christopher.barrie@ed.ac.uk",
+           comment = c(ORCID = "0000-0002-9156-990X")),
+           person(given = "Roberto",
+           family = "Cerina",
+           role = c("aut"),
+           email = "r.cerina@maastrichtuniversity.nl",
+           comment = c(ORCID = "0000-0003-1697-1090")))
+Description: Estimates Bayesian Case-Control technique described in "Explaining Recruitment to Violent Extremism: A Bayesian Case-Control Approach."
+URL: https://github.com/cjbarrie/extremeR
+BugReports: https://github.com/cjbarrie/extremeR/issues
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Depends:
+    R (>= 3.4)
+Imports:
+    sf,
+    spdep,
+    data.table,
+    stats,
+    geodist,
+    magrittr,
+    dplyr,
+    INLA,
+    Matrix,
+    MatrixModels,
+    rstan,
+    R2jags,
+    MASS,
+    SpatialEpi,
+    ape
+LazyData: true
