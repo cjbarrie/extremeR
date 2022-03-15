@@ -14,7 +14,7 @@
 #'
 #' @importFrom R2jags jags
 #' @importFrom MASS mvrnorm
-#' @importFrom stats runif rnorm
+#' @importFrom stats runif rnorm optimize
 #' @importFrom ape Moran.I
 #' @return # # output: a list object with the following variables:
 #' y = see input ;

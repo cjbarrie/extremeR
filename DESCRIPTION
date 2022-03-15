@@ -11,7 +11,12 @@ Authors@R:
            family = "Cerina",
            role = c("aut"),
            email = "r.cerina@maastrichtuniversity.nl",
-           comment = c(ORCID = "0000-0003-1697-1090")))
+           comment = c(ORCID = "0000-0003-1697-1090")),
+           person(given = "Neil",
+	         family = "Ketchley",
+	         role = c("ctb"),
+	         email = "neil.ketchley@politics.ox.ac.uk",
+	         comment = c(ORCID = "0000-0001-5413-2664")))
 Description: Estimates Bayesian Case-Control technique described in "Explaining Recruitment to Violent Extremism: A Bayesian Case-Control Approach."
 URL: https://github.com/cjbarrie/extremeR
 BugReports: https://github.com/cjbarrie/extremeR/issues
