@@ -43,6 +43,6 @@ Imports:
     MASS,
     SpatialEpi,
     ape
-Remotes:
-  hrue/r-inla/rinla@stable
+Remotes: 
+    url::https://github.com/hrue/r-inla/archive/refs/heads/stable.zip
 LazyData: true
