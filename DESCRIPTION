@@ -19,7 +19,8 @@ Authors@R:
 	         comment = c(ORCID = "0000-0001-5413-2664")))
 Description: Estimates Bayesian Case-Control technique described in "Explaining Recruitment to Violent Extremism: A Bayesian Case-Control Approach."
 URL: https://github.com/cjbarrie/extremeR,
-    https://cjbarrie.github.io/extremeR/
+    https://cjbarrie.github.io/extremeR/,
+    http://www.extremer.info/
 BugReports: https://github.com/cjbarrie/extremeR/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
