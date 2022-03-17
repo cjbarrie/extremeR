@@ -43,5 +43,6 @@ Imports:
     MASS,
     SpatialEpi,
     ape
-Remotes: url::https://inla.r-inla-download.org/R/stable/src/contrib/INLA_21.11.22.tar.gz
+Remotes:
+    hrue/r-inla/rinla@stable
 LazyData: true
