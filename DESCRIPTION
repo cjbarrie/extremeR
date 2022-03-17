@@ -42,6 +42,7 @@ Imports:
     R2jags,
     MASS,
     SpatialEpi,
-    ape,
-    hrue/r-inla/rinla@stable
+    ape
+Remotes:
+  hrue/r-inla/rinla@stable
 LazyData: true
