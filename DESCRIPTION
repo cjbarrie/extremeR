@@ -45,5 +45,5 @@ Imports:
     ape,
     INLA
 Remotes:
-    hrue/r-inla/rinla@stable
+    url::https://github.com/hrue/r-inla/archive/refs/heads/stable.zip
 LazyData: true
