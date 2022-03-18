@@ -1,6 +1,7 @@
 url: https://cjbarrie.github.io/extremeR/
 template:
   bootstrap: 5
+  bootswatch: simplex
 reference:
 - title: Prepare data
   desc: |
