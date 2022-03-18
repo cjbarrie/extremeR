@@ -28,7 +28,7 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Depends:
     R (>= 3.4)
-Additional_repositories: https://inla.r-inla-download.org/R/testing
+Additional_repositories: https://inla.r-inla-download.org/R/stable/
 Imports:
     sf,
     spdep,
@@ -43,6 +43,6 @@ Imports:
     R2jags,
     MASS,
     SpatialEpi,
-    ape,
-    INLA (>= 0.0-1468840039),
+    ape
+Suggests: INLA
 LazyData: true
