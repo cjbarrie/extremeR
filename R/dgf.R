@@ -16,19 +16,7 @@
 #' @importFrom MASS mvrnorm
 #' @importFrom stats runif rnorm optimize
 #' @importFrom ape Moran.I
-#' @return # # output: a list object with the following variables:
-#' y = see input ;
-#' pi = see input ;
-#' n =  see input ;
-#' p =  see input ;
-#' X =  matrix of simulated covariates, including a vector of 1s for the intercept ;
-#' X_corr = see input ;
-#' small_area_id = see input for 'fit' function ;
-#' beta = true regression coefficient values ;
-#' gamma = true small-area effects ;
-#' mu = true latent propensity of recruitment ;
-#' moranI.mu = empirical Moran I at the individual-level for true latent propensity of recruitment ;
-#' moranI.gamma = empirical Moran I for true small-area effects
+#' @return a list object
 #'
 #' @export
 #'

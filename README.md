@@ -4,9 +4,6 @@ Repository for package accompanying paper "Explaining Recruitment to Violent Ext
 You can begin using the package by loading into memory using:
 
 ```r
-
 devtools::install_github("cjbarrie/extremeR")
-
 ```
-
 
