@@ -1,4 +1,24 @@
 url: https://cjbarrie.github.io/extremeR/
 template:
   bootstrap: 5
+reference:
+- title: Prepare data
+  desc: |
+    Prepare data in format required for estimation procedure described in "Explaining Recruitment to Violent Extremism: A Bayesian Case-Control Approach.
+  contents: data.prep
+- title: Estimate model
+  desc: |
+    Function to estimate a Bayesian case-control model. Note this function uses STAN and the working environment needs to be optimized for STAN fitting purposes in order to efficiently run the model.
+  contents: fit
+- title: Run simulations
+  desc: |
+    Function to simulate data from a relevant data generating process (DGP) ; currently this function supports the creation of DGPs with 1 layer of area effects (i.e. small-area effects)
+  contents: dgf
+- title: Shapefile data
+  desc: |
+    Shapefile data for `dgf()` function.
+  contents:
+  - scotland
+  - pennLC
+  - NYleukemia
 
