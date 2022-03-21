@@ -10,6 +10,12 @@
     <loc>https://cjbarrie.github.io/extremeR/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://cjbarrie.github.io/extremeR/articles/case-control-worm.html</loc>
+  </url>
+  <url>
+    <loc>https://cjbarrie.github.io/extremeR/articles/index.html</loc>
+  </url>
+  <url>
     <loc>https://cjbarrie.github.io/extremeR/authors.html</loc>
   </url>
   <url>
@@ -20,6 +26,9 @@
   </url>
   <url>
     <loc>https://cjbarrie.github.io/extremeR/reference/data.prep.html</loc>
+  </url>
+  <url>
+    <loc>https://cjbarrie.github.io/extremeR/reference/denom_mena.html</loc>
   </url>
   <url>
     <loc>https://cjbarrie.github.io/extremeR/reference/dgf.html</loc>
@@ -35,5 +44,11 @@
   </url>
   <url>
     <loc>https://cjbarrie.github.io/extremeR/reference/scotland.html</loc>
+  </url>
+  <url>
+    <loc>https://cjbarrie.github.io/extremeR/reference/shape_egypt.html</loc>
+  </url>
+  <url>
+    <loc>https://cjbarrie.github.io/extremeR/reference/survey_egypt.html</loc>
   </url>
 </urlset>
