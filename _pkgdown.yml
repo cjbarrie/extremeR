@@ -17,9 +17,16 @@ reference:
   contents: dgf
 - title: Shapefile data
   desc: |
-    Shapefile data for `dgf()` function.
+    Shapefile data for `dgf()` function and main case-control examples.
   contents:
   - scotland
   - pennLC
   - NYleukemia
+  - shape_egypt
+- title: Case-control data
+  desc: |
+    Example case-control data.
+  contents:
+  - survey_egypt
+  - denom_mena
 
