@@ -42,6 +42,10 @@ Imports:
     R2jags,
     MASS,
     SpatialEpi,
-    ape
-Suggests: INLA
+    ape,
+    INLA
+Suggests: 
+    knitr,
+    rmarkdown
 LazyData: true
+VignetteBuilder: knitr

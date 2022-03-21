@@ -1,0 +1,37 @@
+---
+title: "Case-control estimation worm's eye"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{case-control-worm}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+We first load the package into memory as follows
+```{r setup}
+library(extremeR)
+```
+
+Or first install from source if not already installed.
+
+```{r, eval =FALSE}
+devtools::install_github("cjbarrie/extremeR")
+
+library(extremeR)
+```
+
+We can  then load the data we need into memory using the data bundled in this package as follows. 
+
+```{r}
+data("survey_cleaned")
+data("shape_egypt")
+data("denom_mena")
+```
+

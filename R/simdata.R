@@ -3,8 +3,6 @@
 #' Data taken from `SpatialEpi` package.
 #'
 #' For the `spatial_structure` parameter \code{\link{dgf}} scotland_lipcancer refers to the data in \link[SpatialEp]{scotland}
-#' For the `spatial_structure` parameter \code{\link{dgf}} pennsylvania_lungcancer refers to the data in \link[SpatialEp]{pennLC}
-#' For the `spatial_structure` parameter \code{\link{dgf}} newyork_leukemia refers to the data in \link[SpatialEp]{NYleukemia}
 #'
 #' }
 #' @source \url{https://cran.r-project.org/web/packages/SpatialEpi/index.html}

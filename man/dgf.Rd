@@ -33,20 +33,7 @@ dgf(
 \item{spatial_structure}{on which map should the data be simulated ? (scotland_lipcancer, pennsylvania_lungcancer, and newyork_leukemia)}
 }
 \value{
-# output: a list object with the following variables:
-
-y = see input ;
-pi = see input ;
-n =  see input ;
-p =  see input ;
-X =  matrix of simulated covariates, including a vector of 1s for the intercept ;
-X_corr = see input ;
-small_area_id = see input for 'fit' function ;
-beta = true regression coefficient values ;
-gamma = true small-area effects ;
-mu = true latent propensity of recruitment ;
-moranI.mu = empirical Moran I at the individual-level for true latent propensity of recruitment ;
-moranI.gamma = empirical Moran I for true small-area effects
+a list object
 }
 \description{
 Function to simulate data from a relevant data generating process (DGP) ;

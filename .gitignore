@@ -4,3 +4,6 @@
 .Ruserdata
 docs
 *.DS_Store
+toignore
+'data-raw/matchdata_isisegysc.csv'
+inst/doc
