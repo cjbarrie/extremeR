@@ -9,11 +9,11 @@ reference:
   contents: data.prep
 - title: Estimate model
   desc: |
-    Function to estimate a Bayesian case-control model. Note this function uses STAN and the working environment needs to be optimized for STAN fitting purposes in order to efficiently run the model.
+    Function to estimate a Bayesian case-control model.
   contents: fit
 - title: Run simulations
   desc: |
-    Function to simulate data from a relevant data generating process (DGP) ; currently this function supports the creation of DGPs with 1 layer of area effects (i.e. small-area effects)
+    Function to simulate data from a relevant data generating process (DGP)
   contents: dgf
 - title: Shapefile data
   desc: |
@@ -29,4 +29,10 @@ reference:
   contents:
   - survey_egypt
   - denom_mena
+- title: Helper functions
+  desc: |
+    Helper functions to check graph connected
+  contents:
+  - testconnected
+  - isDisconnected
 

@@ -179,13 +179,13 @@ indexByComponent = function(x) {
   return(y);
 }
 
+# utils
+inv_logit = function(x){exp(x)/(1+exp(x))}
+
 # check that graph is fully connected
 isDisconnected = function(x) {
   return(n.comp.nb(x)[[1]] > 1);
 }
-
-# utils
-inv_logit = function(x){exp(x)/(1+exp(x))}
 
 # test if nb object is fully connected
 testconnected <- function(nb_object) {
