@@ -19,7 +19,7 @@ devtools::install_github("cjbarrie/extremeR")
 ## Getting started
 
 ```{r}
-library(tidyr)
+library(extremeR)
 ```
 
 There are three principal <tt>extremeR</tt> functions.
