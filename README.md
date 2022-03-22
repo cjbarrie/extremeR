@@ -24,6 +24,6 @@ library(tidyr)
 
 There are three principal <tt>extremeR</tt> functions.
 
-* Preparing the data is achieved with `data.prep`, which allows the user to bundle the main relevant data source (case-control data and shapefile data) into a list object for estimation. 
+* Preparing the data is achieved with `data.prep()`, which allows the user to bundle the main relevant data source (case-control data and shapefile data) into a list object for estimation. 
 * Estimating models with different specifications is achieved with `fit()`, which allows the user to estimate models described in the associated article, and to specify hierarchical structure, priors, contamination layer etc. 
 * Simulating example data is achieved with `dgf()`, which allows the user to simulate case-control data with specified spatial structure and level of spatial autocorrelation---among other parameters---and test model fit. 
