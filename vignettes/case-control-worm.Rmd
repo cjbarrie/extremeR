@@ -179,6 +179,8 @@ We can then check that the neighbourhood matrix is properly connected using the 
 testconnected(data.list$nb_object)
 ```
 
+## Estimate model 
+
 And we are then ready to estimate the ERVE model for the Egyptian case-control data. 
 
 ```{r, eval = F}
