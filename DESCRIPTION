@@ -43,7 +43,8 @@ Imports:
     MASS,
     SpatialEpi,
     ape,
-    INLA
+    INLA, 
+    raster
 Suggests: 
     knitr,
     rmarkdown

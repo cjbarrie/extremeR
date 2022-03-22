@@ -17,7 +17,7 @@ individual.data_path <- 'data-raw/matchdata_isisegysc.csv'
 survey = data.table::fread(file = individual.data_path)
 
 survey_egypt <- survey %>%
-  dplyr::select(coledu, age, married, student, lowstat,
+  dplyr::select(case, coledu, age, married, student, lowstat,
          population_density, total_population_2006, christian_2006_pct, university_2006_pct,
          agriculture_2006_pct, mursi_vote_2012_pct, sqrt_killed_at_rabaa, unemployment_2013q4_pct,
          sqrt_protest_post_Mubarak, adm2_pcode)

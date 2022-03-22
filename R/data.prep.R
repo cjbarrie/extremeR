@@ -29,6 +29,7 @@
 #' @importFrom sf st_coordinates st_centroid
 #' @importFrom INLA inla.qinv
 #' @importFrom Matrix Diagonal sparseMatrix
+#' @importFrom raster rowSums
 #' @return
 #' @export
 #'
@@ -289,7 +290,7 @@ data.prep = function(shape,
                 node1_small_area = nb_graph$node1,
                 node2_small_area = nb_graph$node2,
                 N_small_area_edges = nb_graph$N_edges,
-                scaling_factor = scale_nb_components(poly2nb(shape,queen = TRUE))[1],
+                scaling_factor = scale_nb_components(spdep::poly2nb(shape,queen = TRUE))[1],
                 nb.matrix  = nb2mat(neighbours = nb ,style = 'B',zero.policy = TRUE),
 
                 shape_small = shape,
