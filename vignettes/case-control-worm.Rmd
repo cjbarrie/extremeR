@@ -49,7 +49,7 @@ rmarkdown::paged_table(survey_egypt)
 rmarkdown::paged_table(shape_egypt)
 ```
 
-```{r, echo=F}
+```{r, echo=F, warning = F, message=FALSE}
 plot(shape_egypt)
 ```
 
