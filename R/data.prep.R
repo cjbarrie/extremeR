@@ -18,7 +18,7 @@
 #' @param colname_y variable name for the outcome variable - note this should be numeric ;
 #' @param contamination the function spits out an offset based on log(P1/P0) (see Rota et al. 2013) - should this offset account for contamination ? ;
 #' @param pi a scalar defining the prevalence of the outcome in the population of interest ;
-#' @param large_area_shape hould the function return a large-area shapefile ?
+#' @param large_area_shape should the function return a large-area shapefile ?
 #'
 #' @importFrom magrittr %>%
 #' @importFrom spdep poly2nb card nb2mat droplinks n.comp.nb
