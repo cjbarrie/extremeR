@@ -40,6 +40,9 @@
     <loc>https://cjbarrie.github.io/extremeR/reference/index.html</loc>
   </url>
   <url>
+    <loc>https://cjbarrie.github.io/extremeR/reference/isDisconnected.html</loc>
+  </url>
+  <url>
     <loc>https://cjbarrie.github.io/extremeR/reference/pennLC.html</loc>
   </url>
   <url>
@@ -50,5 +53,8 @@
   </url>
   <url>
     <loc>https://cjbarrie.github.io/extremeR/reference/survey_egypt.html</loc>
+  </url>
+  <url>
+    <loc>https://cjbarrie.github.io/extremeR/reference/testconnected.html</loc>
   </url>
 </urlset>
