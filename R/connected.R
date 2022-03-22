@@ -4,6 +4,7 @@
 #'
 #' @param nb_object nb object in prepared data list
 #'
+#' @importFrom spdep n.comp.nb
 #' @return
 #' @export
 #'
@@ -22,6 +23,7 @@ testconnected <- function(nb_object) {
 #'
 #' @param x nb object
 #'
+#' @importFrom spdep n.comp.nb
 #' @return
 #' @export
 #'
