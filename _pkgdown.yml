@@ -5,7 +5,7 @@ template:
 reference:
 - title: Prepare data
   desc: |
-    Prepare data in format required for estimation procedure described in "Explaining Recruitment to Violent Extremism: A Bayesian Case-Control Approach.
+    Function to prepare data in format required for estimation procedure
   contents: data.prep
 - title: Estimate model
   desc: |
@@ -34,5 +34,5 @@ reference:
     Helper functions to check graph connected
   contents:
   - testconnected
-  - isDisconnected
+  - isdisconnected
 

@@ -3,7 +3,7 @@
 export(data.prep)
 export(dgf)
 export(fit)
-export(isDisconnected)
+export(isdisconnected)
 export(testconnected)
 importFrom(INLA,inla.qinv)
 importFrom(MASS,mvrnorm)

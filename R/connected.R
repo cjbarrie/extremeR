@@ -10,7 +10,7 @@
 #'
 #' @examples
 testconnected <- function(nb_object) {
-  if (!isDisconnected(nb_object)) {
+  if (!isdisconnected(nb_object)) {
     print("Success! The Graph is Fully Connected")
   } else{
     warning("Failure... Some parts of the graph are still disconnected...")
@@ -28,6 +28,6 @@ testconnected <- function(nb_object) {
 #' @export
 #'
 #' @examples
-isDisconnected = function(x) {
+isdisconnected = function(x) {
   return(n.comp.nb(x)[[1]] > 1);
 }

@@ -2,9 +2,7 @@
 % Please edit documentation in R/fit.R
 \name{fit}
 \alias{fit}
-\title{Function to estimate a Bayesian case-control model. Note this function uses
-STAN and the working environment needs to be optimized for STAN fitting
-purposes in order to efficiently run the model.}
+\title{Function to estimate a Bayesian case-control model.}
 \usage{
 fit(
   data = data_sim,
@@ -58,7 +56,5 @@ fit(
 
 }
 \description{
-Function to estimate a Bayesian case-control model. Note this function uses
-STAN and the working environment needs to be optimized for STAN fitting
-purposes in order to efficiently run the model.
+Function to estimate a Bayesian case-control model.
 }
