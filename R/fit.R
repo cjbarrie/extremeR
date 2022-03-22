@@ -1,8 +1,6 @@
 # Analyse prepared data
 #'
-#' Function to estimate a Bayesian case-control model. Note this function uses
-#' STAN and the working environment needs to be optimized for STAN fitting
-#' purposes in order to efficiently run the model.
+#' Function to estimate a Bayesian case-control model.
 #'
 #' @param data # data is a list object containing ad-minimum the following elements:
 # data =
