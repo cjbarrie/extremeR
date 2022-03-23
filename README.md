@@ -1,4 +1,4 @@
-# extremeR
+# extremeR <img src="man/figures/hex.png" align="right" alt="" width="120" />
 
 Repository for package accompanying paper "Explaining Recruitment to Violent Extremism: A Bayesian Case-Control Approach."
 
