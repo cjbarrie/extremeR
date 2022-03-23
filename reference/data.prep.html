@@ -24,7 +24,8 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/case-control-worm.html">Case-control estimation: Worm's eye</a>
+    <a class="dropdown-item" href="../articles/estimate.html">Estimate</a>
+    <a class="dropdown-item" href="../articles/prepare.html">Prepare</a>
   </div>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
@@ -77,37 +78,37 @@
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>shape</dt>
-<dd><p>a shapefile</p></dd>
+<dd><p>sf object: shapefile data.</p></dd>
 <dt>survey</dt>
-<dd><p>data which can be connected to the shape file by some small-area id;</p></dd>
+<dd><p>data.table data.frame, case-control data including common geographic ID.</p></dd>
 <dt>shape_large.area_id_name</dt>
-<dd><p>large area identifiers in the shapefile;</p></dd>
+<dd><p>string, large area name identifiers in the shapefile.</p></dd>
 <dt>shape_large.area_id_num</dt>
-<dd><p>large area identifiers in the shapefile;</p></dd>
+<dd><p>integer, large area identifiers in the shapefile.</p></dd>
 <dt>shape_small.area_id_name</dt>
-<dd><p>small area identifiers in the shapefile;</p></dd>
+<dd><p>string, small area name identifiers in the shapefile.</p></dd>
+<dt>shape_small.area_id_num</dt>
+<dd><p>integer, small area identifiers in the shapefile.</p></dd>
 <dt>survey_small.area_id_num</dt>
-<dd><p>small area identifiers in the survey;</p></dd>
+<dd><p>string, small area name identifiers in the survey.</p></dd>
 <dt>survey_small.area_id_name</dt>
-<dd><p>small area identifiers in the survey;</p></dd>
+<dd><p>integer, small area identifiers in the survey.</p></dd>
 <dt>drop.incomplete.records</dt>
-<dd><p>should the function return complete data?;</p></dd>
+<dd><p>logical, should the function return complete data? Defaults to <code>TRUE</code>.</p></dd>
 <dt>colnames_X</dt>
-<dd><p>a character vector of covariates definining the design matrix X. Note these should be numeric;</p></dd>
+<dd><p>character vector, covariates definining the design matrix X. Must be numeric.</p></dd>
 <dt>interactions_list</dt>
-<dd><p>a list object where each element is a string of the form "a*b" where a and be are the names of two variables in colnames_X.</p></dd>
+<dd><p>list, each element is a string of the form "a*b" where a and be are the names of two variables in colnames_X.</p></dd>
 <dt>scale_X</dt>
-<dd><p>takes values "1sd" or "2sd" corresponding namely to (x-xbar)/sd(x) and (x-xbar)/(2sd(x)). No scaling if NA ;</p></dd>
+<dd><p>string, takes values "1sd" or "2sd."</p></dd>
 <dt>colname_y</dt>
-<dd><p>variable name for the outcome variable - note this should be numeric ;</p></dd>
+<dd><p>string, variable name for the outcome variable. Must be numeric.</p></dd>
 <dt>contamination</dt>
-<dd><p>the function spits out an offset based on log(P1/P0) (see Rota et al. 2013) - should this offset account for contamination ? ;</p></dd>
+<dd><p>logical, should this offset account for contamination? Defaults to <code>TRUE</code>.</p></dd>
 <dt>pi</dt>
-<dd><p>a scalar defining the prevalence of the outcome in the population of interest ;</p></dd>
+<dd><p>numeric, scalar defining the prevalence of the outcome in the population of interest.</p></dd>
 <dt>large_area_shape</dt>
-<dd><p>should the function return a large-area shapefile ?</p></dd>
-<dt>shape_small.area_id_numsmall</dt>
-<dd><p>area identifiers in the shapefile;</p></dd>
+<dd><p>logical, should the function return a large-area shapefile? Defaults to <code>TRUE</code>.</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>

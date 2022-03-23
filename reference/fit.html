@@ -24,7 +24,8 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/case-control-worm.html">Case-control estimation: Worm's eye</a>
+    <a class="dropdown-item" href="../articles/estimate.html">Estimate</a>
+    <a class="dropdown-item" href="../articles/prepare.html">Prepare</a>
   </div>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
@@ -75,35 +76,35 @@
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>data</dt>
-<dd><p>data is a list object containing ad-minimum the following elements:</p></dd>
+<dd><p>list, survey and shapefile combined list object created with the data.prep() function.</p></dd>
 <dt>contamination</dt>
-<dd><p>should the model include the rota et al. (2013) style contamination layer?;</p></dd>
+<dd><p>logical, should the model include the Rota et al. (2013) style contamination layer? Defaults to <code>TRUE</code>.</p></dd>
 <dt>offset</dt>
-<dd><p>should the model include a King and Zeng (2001) style offset ? if contamination is also specified, this will be a contaminated-offset ;</p></dd>
+<dd><p>logical, should the model include a King and Zeng (2001) style offset ? if contamination is also specified, this will be a contaminated-offset. Defaults to <code>TRUE</code>.</p></dd>
 <dt>beta_prior</dt>
-<dd><p>what prior should the regression coefficients have ? choice between normal and cauchy;</p></dd>
+<dd><p>string, what prior should the regression coefficients have? Choice between: "normal" and "cauchy."</p></dd>
 <dt>small_area_prior</dt>
-<dd><p>what should be the small-area effects type ? choice between area fixed effects, area random effects, area ICAR effects or area BYM2 effects or NA = no area effects;</p></dd>
+<dd><p>string, what should be the small-area effects type? Choice between: "fixed," "random," "ICAR," and "BYM2." Specify <code>NA</code> for no area effects. Defaults to "fixed.</p></dd>
 <dt>large_area_prior</dt>
-<dd><p>what should be the small-area effects type ? choice between area fixed effects, area random effects, or NA = no area effects;</p></dd>
+<dd><p>string, what should be the large-area effects type? Choice between: "fixed" and "random." Specify <code>NA</code> for no area effects. Defaults to <code>NA</code>.</p></dd>
 <dt>intercept_scale</dt>
-<dd><p>arguments from stan, see <code>?stan</code> for further information.</p></dd>
+<dd><p>integer, scale of intercept; see <code>?stan</code> for further information.</p></dd>
 <dt>iter</dt>
-<dd><p>number of draws; arguments from stan, see <code>?stan</code> for further information</p></dd>
+<dd><p>integer, number of draws; see <code>?stan</code> for further information.</p></dd>
 <dt>warmup</dt>
-<dd><p>number of warmup draws</p></dd>
+<dd><p>number of warmup draws; see <code>?stan</code> for further information.</p></dd>
 <dt>thin</dt>
-<dd><p>number to thin draws</p></dd>
+<dd><p>integer, number to thin draws; see <code>?stan</code> for further information.</p></dd>
 <dt>cores</dt>
-<dd><p>numvber of cores to use</p></dd>
+<dd><p>integer, number of cores to use; see <code>?stan</code> for further information.</p></dd>
 <dt>chains</dt>
-<dd><p>number of chains</p></dd>
+<dd><p>integer, number of chains; see <code>?stan</code> for further information.</p></dd>
 <dt>control</dt>
-<dd><p>list; tree depth and adapta delta</p></dd>
+<dd><p>list; tree depth and adapt delta; see <code>?stan</code> for further information.</p></dd>
 <dt>verbose</dt>
-<dd><p>print full stan output</p></dd>
+<dd><p>logical, print full stan output? Defaults to <code>TRUE</code>.</p></dd>
 <dt>show_code</dt>
-<dd><p>should the stan code print on the screen at the end of the run ? (useful for checks);</p></dd>
+<dd><p>logical, should the stan code print on the screen at the end of the run? Defaults to <code>TRUE</code>.</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>

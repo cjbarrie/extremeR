@@ -6,12 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="extremeR">
-<title>Case-control estimation: Worm's eye • extremeR</title>
+<title>Prepare • extremeR</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Case-control estimation: Worm's eye">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Prepare">
 <meta property="og:description" content="extremeR">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -41,7 +41,8 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/case-control-worm.html">Case-control estimation: Worm's eye</a>
+    <a class="dropdown-item" href="../articles/estimate.html">Estimate</a>
+    <a class="dropdown-item" href="../articles/prepare.html">Prepare</a>
   </div>
 </li>
       </ul>
@@ -65,14 +66,14 @@
 
 
 
-<script src="case-control-worm_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="case-control-worm_files/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="case-control-worm_files/pagedtable-1.1/js/pagedtable.js"></script><div class="row">
+<script src="prepare_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="prepare_files/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="prepare_files/pagedtable-1.1/js/pagedtable.js"></script><div class="row">
   <main id="main"><div class="page-header">
-      <img src="" class="logo" alt=""><h1>Case-control estimation: Worm's eye</h1>
+      <img src="" class="logo" alt=""><h1>Prepare</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/cjbarrie/extremeR/blob/HEAD/vignettes/case-control-worm.Rmd" class="external-link"><code>vignettes/case-control-worm.Rmd</code></a></small>
-      <div class="d-none name"><code>case-control-worm.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/cjbarrie/extremeR/blob/HEAD/vignettes/prepare.Rmd" class="external-link"><code>vignettes/prepare.Rmd</code></a></small>
+      <div class="d-none name"><code>prepare.Rmd</code></div>
     </div>
 
     
@@ -87,8 +88,8 @@
 <li>Estimate the model using <code><a href="../reference/fit.html">fit()</a></code>
 </li>
 </ol>
-<p>This explainer vignette walks you through each of these two steps.</p>
-<p>Step 1 requires two sources of data: survey data with labels for “cases” and “controls” (as well as any relevant covariates) and a shapefile for the geographical region under investigation; Step 2 requires these two data sources prepared in list format to be passed to the estimating equation.</p>
+<p>This explainer vignette walks you through the first of these two steps.</p>
+<p>Preparing the dataset for the estimation procedure requires two sources of data: 1) survey data with labels for “cases” and “controls” (as well as any relevant covariates) and; a shapefile for the geographical region under investigation.</p>
 </div>
 <div class="section level2">
 <h2 id="setup">Setup<a class="anchor" aria-label="anchor" href="#setup"></a>
@@ -137,7 +138,7 @@ Here we see that our observations are labelled as either “0” if a control or
 </div>
 <p>The shapefile data is plotted below. The relevant geographic identifiers we’ll be using in the shapefile are “ADM1_EN” for the large area and “ADM2_EN” for the small area.</p>
 <p>We’ll then be merging with the “ADM2_PCODE” identifier, as this is the common identifier between our shapefile and case-control data.</p>
-<p><img src="case-control-worm_files/figure-html/unnamed-chunk-8-1.png" width="700"></p>
+<p><img src="prepare_files/figure-html/unnamed-chunk-8-1.png" width="700"></p>
 <p>Finally, we need to input information on the known prevalence of the outcome in the population of interest. For this, we need to know the relevant population denominator. In the ERVE example, this is the adult male Sunni population.</p>
 These data are also bundled into the package, and we can look at them below.
 <div data-pagedtable="false">
@@ -166,67 +167,70 @@ These data are also bundled into the package, and we can look at them below.
 <tbody>
 <tr class="odd">
 <td>shape</td>
-<td align="center">shapefile data</td>
+<td align="center">sf object, shapefile data</td>
 </tr>
 <tr class="even">
 <td>survey</td>
-<td align="center">sase-control data including common geographic ID</td>
+<td align="center">data.table data.frame, case-control data including common geographic ID</td>
 </tr>
 <tr class="odd">
 <td>shape_large.area_id_name</td>
-<td align="center">large area name identifiers in the shapefile</td>
+<td align="center">string, large area name identifiers in the shapefile</td>
 </tr>
 <tr class="even">
 <td>shape_large.area_id_num</td>
-<td align="center">large area numeric identifiers in the shapefile</td>
+<td align="center">integer, large area identifiers in the shapefile</td>
 </tr>
 <tr class="odd">
 <td>shape_small.area_id_name</td>
-<td align="center">small area name identifiers in the shapefile</td>
+<td align="center">string, small area name identifiers in the shapefile</td>
 </tr>
 <tr class="even">
 <td>shape_small.area_id_num</td>
-<td align="center">small area numeric identifiers in the shapefile</td>
+<td align="center">integer, small area identifiers in the shapefile</td>
 </tr>
 <tr class="odd">
 <td>survey_small.area_id_name</td>
-<td align="center">small area name identifiers in the survey</td>
+<td align="center">string, small area name identifiers in the survey</td>
 </tr>
 <tr class="even">
 <td>survey_small.area_id_num</td>
-<td align="center">small area numeric identifiers in the survey</td>
+<td align="center">integer, small area identifiers in the survey</td>
 </tr>
 <tr class="odd">
 <td>drop.incomplete.records</td>
-<td align="center">should the function return complete data?</td>
+<td align="center">logical, should the function return complete data? Defaults to <code>TRUE</code>
+</td>
 </tr>
 <tr class="even">
 <td>colnames_X</td>
-<td align="center">a character vector of covariates definining the design matrix X. Note these should be numeric</td>
+<td align="center">character vector, covariates definining the design matrix X. Must be numeric.</td>
 </tr>
 <tr class="odd">
 <td>interactions_list</td>
-<td align="center">a list object where each element is a string of the form "a*b" where a and be are the names of two variables in colnames_X</td>
+<td align="center">list, each element is a string of the form "a*b" where a and be are the names of two variables in colnames_X</td>
 </tr>
 <tr class="even">
 <td>scale_X</td>
-<td align="center">takes values “1sd” or “2sd”</td>
+<td align="center">string, takes values “1sd” or “2sd”</td>
 </tr>
 <tr class="odd">
 <td>colname_y</td>
-<td align="center">numeric variable name for the outcome variable</td>
+<td align="center">string, variable name for the outcome variable. Must be numeric.</td>
 </tr>
 <tr class="even">
 <td>contamination</td>
-<td align="center">should this offset account for contamination?</td>
+<td align="center">logical, should this offset account for contamination? Defaults to <code>TRUE</code>
+</td>
 </tr>
 <tr class="odd">
 <td>pi</td>
-<td align="center">a scalar defining the prevalence of the outcome in the population of interest</td>
+<td align="center">numeric, scalar defining the prevalence of the outcome in the population of interest</td>
 </tr>
 <tr class="even">
 <td>large_area_shape</td>
-<td align="center">should the function return a large-area shapefile?</td>
+<td align="center">logical, should the function return a large-area shapefile? Defaults to <code>TRUE</code>
+</td>
 </tr>
 </tbody>
 </table>
@@ -299,34 +303,14 @@ These data are also bundled into the package, and we can look at them below.
 <span class="co">## nb.matrix          133225 -none-     numeric  </span>
 <span class="co">## shape_small            20 sf         list     </span>
 <span class="co">## shape_large             2 sf         list</span></code></pre>
-<p>We can then check that the neighbourhood matrix is properly connected using the <code><a href="../reference/testconnected.html">testconnected()</a></code> function as below.</p>
+<p>And we can save the formatted data for later use as follows.</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/save.html" class="external-link">save</a></span><span class="op">(</span><span class="va">data.list</span>, <span class="st">"data/data.list.rda"</span><span class="op">)</span></code></pre></div>
+<p>We can then check that the neighbourhood matrix is properly connected using the <code><a href="../reference/testconnected.html">testconnected()</a></code> function as below.</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># check that the nb object is fully connected</span>
 <span class="fu"><a href="../reference/testconnected.html">testconnected</a></span><span class="op">(</span><span class="va">data.list</span><span class="op">$</span><span class="va">nb_object</span><span class="op">)</span></code></pre></div>
 <pre><code><span class="co">## [1] "Success! The Graph is Fully Connected"</span></code></pre>
-</div>
-<div class="section level2">
-<h2 id="estimate-model">Estimate model<a class="anchor" aria-label="anchor" href="#estimate-model"></a>
-</h2>
-<p>And we are then ready to estimate the ERVE model for the Egyptian case-control data.</p>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">fit_object</span> <span class="op">=</span> <span class="fu"><a href="../reference/fit.html">fit</a></span><span class="op">(</span>
-  data <span class="op">=</span> <span class="va">data.list</span>,
-  show_code <span class="op">=</span> <span class="cn">T</span>,
-  contamination <span class="op">=</span> <span class="cn">T</span>,
-  offset <span class="op">=</span> <span class="cn">T</span>,
-  beta_prior <span class="op">=</span> <span class="st">"cauchy"</span>,
-  small_area_prior <span class="op">=</span> <span class="st">"BYM2"</span>,
-  intercept_scale <span class="op">=</span> <span class="fl">10</span>,
-  large_area_prior <span class="op">=</span> <span class="st">"random"</span>,
-  iter <span class="op">=</span> <span class="fl">25000</span>,
-  warmup <span class="op">=</span> <span class="fl">22500</span>,
-  thin <span class="op">=</span> <span class="fl">4</span>,
-  cores <span class="op">=</span> <span class="fl">4</span>,
-  chains <span class="op">=</span> <span class="fl">4</span>,
-  control <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>max_treedepth <span class="op">=</span> <span class="fl">25</span>, adapt_delta <span class="op">=</span> <span class="fl">0.99</span><span class="op">)</span>,
-  verbose <span class="op">=</span> <span class="cn">T</span>
-<span class="op">)</span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
