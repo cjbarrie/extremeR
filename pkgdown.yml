@@ -3,7 +3,7 @@ pkgdown: 2.0.2
 pkgdown_sha: ~
 articles:
   case-control-worm: case-control-worm.html
-last_built: 2022-03-23T08:02Z
+last_built: 2022-03-23T08:04Z
 urls:
   reference: https://cjbarrie.github.io/extremeR/reference
   article: https://cjbarrie.github.io/extremeR/articles
