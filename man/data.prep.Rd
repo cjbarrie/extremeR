@@ -24,37 +24,37 @@ data.prep(
 )
 }
 \arguments{
-\item{shape}{a shapefile}
+\item{shape}{sf object: shapefile data.}
 
-\item{survey}{data which can be connected to the shape file by some small-area id;}
+\item{survey}{data.table data.frame, case-control data including common geographic ID.}
 
-\item{shape_large.area_id_name}{large area identifiers in the shapefile;}
+\item{shape_large.area_id_name}{string, large area name identifiers in the shapefile.}
 
-\item{shape_large.area_id_num}{large area identifiers in the shapefile;}
+\item{shape_large.area_id_num}{integer, large area identifiers in the shapefile.}
 
-\item{shape_small.area_id_name}{small area identifiers in the shapefile;}
+\item{shape_small.area_id_name}{string, small area name identifiers in the shapefile.}
 
-\item{survey_small.area_id_num}{small area identifiers in the survey;}
+\item{shape_small.area_id_num}{integer, small area identifiers in the shapefile.}
 
-\item{survey_small.area_id_name}{small area identifiers in the survey;}
+\item{survey_small.area_id_num}{string, small area name identifiers in the survey.}
 
-\item{drop.incomplete.records}{should the function return complete data?;}
+\item{survey_small.area_id_name}{integer, small area identifiers in the survey.}
 
-\item{colnames_X}{a character vector of covariates definining the design matrix X. Note these should be numeric;}
+\item{drop.incomplete.records}{logical, should the function return complete data? Defaults to \code{TRUE}.}
 
-\item{interactions_list}{a list object where each element is a string of the form "a*b" where a and be are the names of two variables in colnames_X.}
+\item{colnames_X}{character vector, covariates definining the design matrix X. Must be numeric.}
 
-\item{scale_X}{takes values "1sd" or "2sd" corresponding namely to (x-xbar)/sd(x) and (x-xbar)/(2sd(x)). No scaling if NA ;}
+\item{interactions_list}{list, each element is a string of the form "a*b" where a and be are the names of two variables in colnames_X.}
 
-\item{colname_y}{variable name for the outcome variable - note this should be numeric ;}
+\item{scale_X}{string, takes values "1sd" or "2sd."}
 
-\item{contamination}{the function spits out an offset based on log(P1/P0) (see Rota et al. 2013) - should this offset account for contamination ? ;}
+\item{colname_y}{string, variable name for the outcome variable. Must be numeric.}
 
-\item{pi}{a scalar defining the prevalence of the outcome in the population of interest ;}
+\item{contamination}{logical, should this offset account for contamination? Defaults to \code{TRUE}.}
 
-\item{large_area_shape}{should the function return a large-area shapefile ?}
+\item{pi}{numeric, scalar defining the prevalence of the outcome in the population of interest.}
 
-\item{shape_small.area_id_numsmall}{area identifiers in the shapefile;}
+\item{large_area_shape}{logical, should the function return a large-area shapefile? Defaults to \code{TRUE}.}
 }
 \value{
 

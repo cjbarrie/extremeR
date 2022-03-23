@@ -22,35 +22,35 @@ fit(
 )
 }
 \arguments{
-\item{data}{data is a list object containing ad-minimum the following elements:}
+\item{data}{list, survey and shapefile combined list object created with the data.prep() function.}
 
-\item{contamination}{should the model include the rota et al. (2013) style contamination layer?;}
+\item{contamination}{logical, should the model include the Rota et al. (2013) style contamination layer? Defaults to \code{TRUE}.}
 
-\item{offset}{should the model include a King and Zeng (2001) style offset ? if contamination is also specified, this will be a contaminated-offset ;}
+\item{offset}{logical, should the model include a King and Zeng (2001) style offset ? if contamination is also specified, this will be a contaminated-offset. Defaults to \code{TRUE}.}
 
-\item{beta_prior}{what prior should the regression coefficients have ? choice between normal and cauchy;}
+\item{beta_prior}{string, what prior should the regression coefficients have? Choice between: "normal" and "cauchy."}
 
-\item{small_area_prior}{what should be the small-area effects type ? choice between area fixed effects, area random effects, area ICAR effects or area BYM2 effects or NA = no area effects;}
+\item{small_area_prior}{string, what should be the small-area effects type? Choice between: "fixed," "random," "ICAR," and "BYM2." Specify \code{NA} for no area effects. Defaults to "fixed.}
 
-\item{large_area_prior}{what should be the small-area effects type ? choice between area fixed effects, area random effects, or NA = no area effects;}
+\item{large_area_prior}{string, what should be the large-area effects type? Choice between: "fixed" and "random." Specify \code{NA} for no area effects. Defaults to \code{NA}.}
 
-\item{intercept_scale}{arguments from stan, see \code{?stan} for further information.}
+\item{intercept_scale}{integer, scale of intercept; see \code{?stan} for further information.}
 
-\item{iter}{number of draws; arguments from stan, see \code{?stan} for further information}
+\item{iter}{integer, number of draws; see \code{?stan} for further information.}
 
-\item{warmup}{number of warmup draws}
+\item{warmup}{number of warmup draws; see \code{?stan} for further information.}
 
-\item{thin}{number to thin draws}
+\item{thin}{integer, number to thin draws; see \code{?stan} for further information.}
 
-\item{cores}{numvber of cores to use}
+\item{cores}{integer, number of cores to use; see \code{?stan} for further information.}
 
-\item{chains}{number of chains}
+\item{chains}{integer, number of chains; see \code{?stan} for further information.}
 
-\item{control}{list; tree depth and adapta delta}
+\item{control}{list; tree depth and adapt delta; see \code{?stan} for further information.}
 
-\item{verbose}{print full stan output}
+\item{verbose}{logical, print full stan output? Defaults to \code{TRUE}.}
 
-\item{show_code}{should the stan code print on the screen at the end of the run ? (useful for checks);}
+\item{show_code}{logical, should the stan code print on the screen at the end of the run? Defaults to \code{TRUE}.}
 }
 \value{
 

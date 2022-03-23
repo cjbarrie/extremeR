@@ -14,3 +14,10 @@
 #' }
 #' @source \url{https://population.un.org/wpp/Download/Standard/Population/}
 "denom_mena"
+
+#' Formatted shape and case-control data for Egypt ISIS cases and controls
+#'
+#' Data taken from leaked ISIS border documents and merged with shapefile data.
+#'
+#'
+"data.list"

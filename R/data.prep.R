@@ -2,23 +2,22 @@
 #'
 #' Prepare data in format required for estimation procedure described in "Explaining Recruitment to Violent Extremism: A Bayesian Case-Control Approach.
 #'
-#' @param shape a shapefile
-#' @param survey data which can be connected to the shape file by some small-area id;
-#' @param shape_large.area_id_name large area identifiers in the shapefile;
-#' @param shape_large.area_id_num  large area identifiers in the shapefile;
-#' @param shape_small.area_id_name small area identifiers in the shapefile;
-#' @param shape_small.area_id_numsmall area identifiers in the shapefile;
-#' @param survey_small.area_id_num small area identifiers in the survey;
-#' @param survey_small.area_id_name small area identifiers in the survey;
-#' @param drop.incomplete.records should the function return complete data?;
-#' @param colnames_X a character vector of covariates definining the design matrix X. Note these should be numeric;
-#' @param interactions_list a list object where each element is a string of the form "a*b" where a and be are the names of two variables in colnames_X.
-# The names of each element correspond to the name of the interaction variable in X. If no names are specified, the names of a and b will be used to define the variable name ;
-#' @param scale_X takes values "1sd" or "2sd" corresponding namely to (x-xbar)/sd(x) and (x-xbar)/(2sd(x)). No scaling if NA ;
-#' @param colname_y variable name for the outcome variable - note this should be numeric ;
-#' @param contamination the function spits out an offset based on log(P1/P0) (see Rota et al. 2013) - should this offset account for contamination ? ;
-#' @param pi a scalar defining the prevalence of the outcome in the population of interest ;
-#' @param large_area_shape should the function return a large-area shapefile ?
+#' @param shape sf object: shapefile data.
+#' @param survey  data.table data.frame, case-control data including common geographic ID.
+#' @param shape_large.area_id_name string, large area name identifiers in the shapefile.
+#' @param shape_large.area_id_num  integer, large area identifiers in the shapefile.
+#' @param shape_small.area_id_name string, small area name identifiers in the shapefile.
+#' @param shape_small.area_id_num integer, small area identifiers in the shapefile.
+#' @param survey_small.area_id_num string, small area name identifiers in the survey.
+#' @param survey_small.area_id_name integer, small area identifiers in the survey.
+#' @param drop.incomplete.records logical, should the function return complete data? Defaults to `TRUE`.
+#' @param colnames_X character vector, covariates definining the design matrix X. Must be numeric.
+#' @param interactions_list list, each element is a string of the form "a*b" where a and be are the names of two variables in colnames_X.
+#' @param scale_X string, takes values "1sd" or "2sd."
+#' @param colname_y string, variable name for the outcome variable. Must be numeric.
+#' @param contamination logical, should this offset account for contamination? Defaults to `TRUE`.
+#' @param pi numeric, scalar defining the prevalence of the outcome in the population of interest.
+#' @param large_area_shape logical, should the function return a large-area shapefile? Defaults to `TRUE`.
 #'
 #' @importFrom magrittr %>%
 #' @importFrom spdep poly2nb card nb2mat droplinks n.comp.nb

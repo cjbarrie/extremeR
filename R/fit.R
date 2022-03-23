@@ -2,40 +2,21 @@
 #'
 #' Function to estimate a Bayesian case-control model.
 #'
-#' @param data # data is a list object containing ad-minimum the following elements:
-# data =
-# list(n = integer denoting sample size (recommended n>=100) ;
-#      y = vector of size n of Bernoulli distributed values y ∈ {0,1} ;
-#      pi = integer denoting the % of cases in the population pi ∈ [0,1] ;
-#      p = number of fixed effects regression coefficients (including the intercept) ;
-#      X = (n x p) matrix of covariates (first column is a column of 1s for intercept) - ensure columns of X are scaled for optimal performance ;
-# The following are relevant if there are supposed to be any small-area-level effects :
-#      N_small_area = integer denoting the number of small-areas in the map;
-#      small_area_id = numerical vector (length = n ) of integers denoting the numerical ID of the area to which each individual belongs to - small_area_id ∈ {0,...,N_small_area};
-# The following are relevant if there are supposed to be BYM2-style small-area-level effects :
-# to get these, simply use the nb2graph function, followed by the scale_nb_components to derive the scaling factor
-#      node1_small_area = ...;
-#      node2_small_area = ...;
-#      N_small_area_edges = ...;
-#      scaling_factor = ...;
-# The following are relevant if there are supposed to be any large-area-level effects :
-#      N_large_area = integer denoting the number of large-areas in the map;
-#      large_area_id = numerical vector (length = n ) of integers denoting the numerical ID of the area to which each individual belongs to - large_area_id ∈ {0,...,N_large_area};
-# )
-#' @param show_code should the stan code print on the screen at the end of the run ? (useful for checks);
-#' @param contamination should the model include the rota et al. (2013) style contamination layer?;
-#' @param offset should the model include a King and Zeng (2001) style offset ? if contamination is also specified, this will be a contaminated-offset ;
-#' @param beta_prior what prior should the regression coefficients have ? choice between normal and cauchy;
-#' @param small_area_prior what should be the small-area effects type ? choice between area fixed effects, area random effects, area ICAR effects or area BYM2 effects or NA = no area effects;
-#' @param large_area_prior what should be the small-area effects type ? choice between area fixed effects, area random effects, or NA = no area effects;
-#' @param intercept_scale arguments from stan, see `?stan` for further information.
-#' @param iter number of draws; arguments from stan, see `?stan` for further information
-#' @param warmup number of warmup draws
-#' @param thin number to thin draws
-#' @param cores numvber of cores to use
-#' @param chains number of chains
-#' @param control list; tree depth and adapta delta
-#' @param verbose print full stan output
+#' @param data # list, survey and shapefile combined list object created with the `data.prep()` function.
+#' @param show_code logical, should the stan code print on the screen at the end of the run? Defaults to `TRUE`.
+#' @param contamination logical, should the model include the Rota et al. (2013) style contamination layer? Defaults to `TRUE`.
+#' @param offset logical, should the model include a King and Zeng (2001) style offset ? if contamination is also specified, this will be a contaminated-offset. Defaults to `TRUE`.
+#' @param beta_prior string, what prior should the regression coefficients have? Choice between: "normal" and "cauchy."
+#' @param small_area_prior string, what should be the small-area effects type? Choice between: "fixed," "random," "ICAR," and "BYM2." Specify `NA` for no area effects. Defaults to "fixed.
+#' @param large_area_prior string, what should be the large-area effects type? Choice between: "fixed" and "random." Specify `NA` for no area effects. Defaults to `NA`.
+#' @param intercept_scale integer, scale of intercept; see `?stan` for further information.
+#' @param iter integer, number of draws; see `?stan` for further information.
+#' @param warmup number of warmup draws; see `?stan` for further information.
+#' @param thin integer, number to thin draws; see `?stan` for further information.
+#' @param cores integer, number of cores to use; see `?stan` for further information.
+#' @param chains integer, number of chains; see `?stan` for further information.
+#' @param control list; tree depth and adapt delta; see `?stan` for further information.
+#' @param verbose logical, print full stan output? Defaults to `TRUE`.
 #'
 #' @importFrom stats model.matrix
 #' @importFrom rstan stan
