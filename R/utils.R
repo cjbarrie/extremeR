@@ -85,7 +85,7 @@ nb2graph = function(x) {
 #
 scale_nb_components = function(x) {
   N = length(x);
-  comp_ids = spdep::n.comp.nb(x)[[2]];
+  comp_ids = n.comp.nb(x)[[2]];
   offsets = indexByComponent(comp_ids);
 
   comps = as.matrix(table(comp_ids));
@@ -97,18 +97,18 @@ scale_nb_components = function(x) {
     if (N_subregions > 1) {
       # get adj matrix for this component
       drops = comp_ids != i;
-      nb_tmp = spdep::droplinks(x, drops);
+      nb_tmp = droplinks(x, drops);
       nb_graph = nb2subgraph(nb_tmp, i, comp_ids, offsets);
-      adj.matrix = Matrix::sparseMatrix( i=nb_graph$node1, j=nb_graph$node2, x=1, dims=c(N_subregions,N_subregions), symmetric=TRUE);
+      adj.matrix = sparseMatrix( i=nb_graph$node1, j=nb_graph$node2, x=1, dims=c(N_subregions,N_subregions), symmetric=TRUE);
       # compute ICAR precision matrix
-      Q =  Matrix::Diagonal(N_subregions, raster::rowSums(adj.matrix)) - adj.matrix;
+      Q =  Diagonal(N_subregions, rowSums(adj.matrix)) - adj.matrix;
       # Add a small jitter to the diagonal for numerical stability (optional but recommended)
-      Q_pert = Q + Matrix::Diagonal(N_subregions) * max(diag(Q)) * sqrt(.Machine$double.eps)
+      Q_pert = Q + Diagonal(N_subregions) * max(Matrix::diag(Q)) * sqrt(.Machine$double.eps) # changed to Matrix::diag to deal with S4 class dsCMatrix
       # Compute the diagonal elements of the covariance matrix subject to the
       # constraint that the entries of the ICAR sum to zero.
       Q_inv = inla.qinv(Q_pert, constr=list(A = matrix(1,1,N_subregions),e=0))
       # Compute the geometric mean of the variances, which are on the diagonal of Q.inv
-      scaling_factor = exp(mean(log(diag(Q_inv))))
+      scaling_factor = exp(mean(log(Matrix::diag(Q_inv)))) # changed to Matrix::diag to deal with S4 class dsCMatrix
       scales[i] = scaling_factor;
     }
   }
@@ -309,4 +309,30 @@ plot_network <- function(shape, nb_object,
   if(plot.over.map){connectedplot = plot(sf::st_geometry(shape),border = map.border.col,lwd = map.border.lwd,col = map.plygon.col)}
   connectedplot = plot(nb_object,sf::st_coordinates(sf::st_centroid(shape)),
                        add=plot.over.map,col = edge.col,cex = node.cex,lwd = edge.lwd,pch = node.pch,lty = edge.lty)
+}
+
+# add specific neighbours - useful to merge shapefiles and get correct neighbourhood
+add_specific_nbs <- function(nb,name1,name2,IDs){
+  nb[[which(IDs==name1)]] = sort(c(nb[[which(IDs==name1)]],which(IDs==name2)))
+  nb[[which(IDs==name2)]] = sort(c(nb[[which(IDs==name2)]],which(IDs==name1)))
+  return(nb)
+}
+
+# validateNb
+# check that nbObject is symmetric, has connected components
+validateNb = function(x) {
+  if (is.symmetric.nb(x) && n.comp.nb(x)[[1]] < length(x)) return(TRUE);
+  return(FALSE);
+}
+
+Moran.I.bootleg = function(x,W){
+  N <- dim(W)[1];
+  x.bar <- mean(x);
+  dx <- x - x.bar;
+  g <- expand.grid(dx, dx);
+  xixj <- g[,1] * g[,2];
+  num <- N*sum(W*matrix(xixj, ncol=N));
+  denom <- sum(W)*sum(dx^2);
+  I = num/denom;
+  return(I)
 }

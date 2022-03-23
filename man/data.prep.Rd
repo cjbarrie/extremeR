@@ -52,7 +52,7 @@ data.prep(
 
 \item{pi}{a scalar defining the prevalence of the outcome in the population of interest ;}
 
-\item{large_area_shape}{hould the function return a large-area shapefile ?}
+\item{large_area_shape}{should the function return a large-area shapefile ?}
 
 \item{shape_small.area_id_numsmall}{area identifiers in the shapefile;}
 }

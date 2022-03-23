@@ -16,4 +16,4 @@ plt <- ggplot(data.frame(x = c(-4, 4)), aes(x = x)) +
             xlim = c(2, 4))
 
 sticker(plt, package="extremeR", p_size=20, s_x=1.05, s_y=.8, s_width=1, s_height=1,
-        h_fill="black", h_color="grey", filename = "man/figures/hex.png")
+        h_fill="#373737", h_color="grey", filename = "man/figures/hex.png")

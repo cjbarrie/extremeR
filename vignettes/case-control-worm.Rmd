@@ -116,10 +116,7 @@ The `data.prep()` function has a series of parameters that we tabulate and descr
 |large_area_shape | should the function return a large-area shapefile?
 
 
-```{r, eval = F}
-
-#TODO fix long vectors not supported error--at present below load pre-estimated data list
-
+```{r, eval = T, warning = F, message = F}
 # prep data
 data.list =
   data.prep(
@@ -159,10 +156,6 @@ data.list =
 ```
 
 The `data.prep()` function takes our shapefile and case-control data and bundles it into a list. 
-
-```{r, echo =F}
-data(datalist_worm)
-```
 
 We can look at the structure of these data below. We see that the list contains our survey data, shapefiles, generated neighbourhood matrices, outcome observations etc. 
 
