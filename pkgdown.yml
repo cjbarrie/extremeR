@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   estimate: estimate.html
   prepare: prepare.html
-last_built: 2022-03-24T12:15Z
+last_built: 2022-03-24T13:50Z
 urls:
   reference: https://cjbarrie.github.io/extremeR/reference
   article: https://cjbarrie.github.io/extremeR/articles

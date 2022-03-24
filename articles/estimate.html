@@ -95,9 +95,10 @@
 <p>First install the package from source if not already installed.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"cjbarrie/extremeR"</span><span class="op">)</span></code></pre></div>
-<p>We then load the package into memory as follows.</p>
+<p>We then load the package into memory as follows. We will also be using several functions from the <code>rstan</code> package.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/cjbarrie/extremeR" class="external-link">extremeR</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/cjbarrie/extremeR" class="external-link">extremeR</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstan/" class="external-link">rstan</a></span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="load-data">Load data<a class="anchor" aria-label="anchor" href="#load-data"></a>
@@ -110,7 +111,7 @@
 <h2 id="estimate-model">Estimate model<a class="anchor" aria-label="anchor" href="#estimate-model"></a>
 </h2>
 <p>And we are then ready to estimate the ERVE model for the Egyptian case-control data.</p>
-<p>The <code>fitp()</code> function has a series of parameters that we tabulate and describe below.</p>
+<p>The <code><a href="../reference/fit.html">fit()</a></code> function has a series of parameters that we tabulate and describe below.</p>
 <table class="table">
 <colgroup>
 <col width="40%">
@@ -205,6 +206,59 @@
   control <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>max_treedepth <span class="op">=</span> <span class="fl">25</span>, adapt_delta <span class="op">=</span> <span class="fl">0.99</span><span class="op">)</span>,
   verbose <span class="op">=</span> <span class="cn">T</span>
 <span class="op">)</span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="check-mcmc-convergence">Check MCMC convergence<a class="anchor" aria-label="anchor" href="#check-mcmc-convergence"></a>
+</h2>
+<p>We can then check the summary convergence statistics by using the <code><a href="https://mc-stan.org/rstan/reference/monitor.html" class="external-link">monitor()</a></code> function in <code>rstan</code>.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">mon_egypt</span> <span class="op">&lt;-</span> <span class="fu">rstan</span><span class="fu">::</span><span class="fu"><a href="https://mc-stan.org/rstan/reference/monitor.html" class="external-link">monitor</a></span><span class="op">(</span><span class="fu">rstan</span><span class="fu">::</span><span class="fu"><a href="https://mc-stan.org/rstan/reference/stanfit-method-extract.html" class="external-link">extract</a></span><span class="op">(</span><span class="va">fit_object</span>, permuted <span class="op">=</span> <span class="cn">FALSE</span>, inc_warmup <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<p>And we could inspect the output for, e.g., the <span class="math inline">\(\hat{R}\)</span> values as follows.</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">rhats</span> <span class="op">&lt;-</span> <span class="va">mon_egypt</span><span class="op">$</span><span class="va">Rhat</span>
+<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">rhats</span><span class="op">)</span></code></pre></div>
+<p><img src="estimate_files/figure-html/unnamed-chunk-8-1.png" width="700"></p>
+</div>
+<div class="section level2">
+<h2 id="inspect-output">Inspect output<a class="anchor" aria-label="anchor" href="#inspect-output"></a>
+</h2>
+<p>And we are able to access the estimated parameters of the “stanfit” object by using the <code><a href="https://mc-stan.org/rstan/reference/stanfit-method-extract.html" class="external-link">extract()</a></code> function in <code>rstan</code>.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">betas_egypt</span> <span class="op">&lt;-</span> <span class="fu">rstan</span><span class="fu">::</span><span class="fu"><a href="https://mc-stan.org/rstan/reference/stanfit-method-extract.html" class="external-link">extract</a></span><span class="op">(</span><span class="va">fit_object</span> ,
+                           pars <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'beta'</span><span class="op">)</span>,
+                           permuted <span class="op">=</span> <span class="cn">TRUE</span>,
+                           inc_warmup <span class="op">=</span> <span class="cn">FALSE</span>,
+                           include <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+<p>Or printing from the fit object directly.</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">fit_object</span>, pars<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"beta"</span><span class="op">)</span>, probs<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">.1</span>,<span class="fl">.5</span>,<span class="fl">.9</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<pre><code><span class="co">## Inference for Stan model: anon_model.</span>
+<span class="co">## 4 chains, each with iter=25000; warmup=22500; thin=4; </span>
+<span class="co">## post-warmup draws per chain=625, total post-warmup draws=2500.</span>
+<span class="co">## </span>
+<span class="co">##            mean se_mean   sd    10%    50%    90% n_eff Rhat</span>
+<span class="co">## beta[1]  -13.26    0.02 0.88 -14.41 -13.19 -12.20  2265    1</span>
+<span class="co">## beta[2]    0.56    0.01 0.27   0.22   0.55   0.91  2683    1</span>
+<span class="co">## beta[3]   -0.38    0.02 1.05  -1.65  -0.39   0.84  2513    1</span>
+<span class="co">## beta[4]    0.05    0.01 0.31  -0.35   0.06   0.45  2361    1</span>
+<span class="co">## beta[5]    0.18    0.00 0.23  -0.11   0.18   0.47  2462    1</span>
+<span class="co">## beta[6]   -0.85    0.01 0.47  -1.46  -0.81  -0.30  2470    1</span>
+<span class="co">## beta[7]    1.36    0.01 0.73   0.49   1.27   2.31  2472    1</span>
+<span class="co">## beta[8]   -0.15    0.01 0.57  -0.87  -0.15   0.57  2004    1</span>
+<span class="co">## beta[9]   -0.29    0.01 0.61  -1.05  -0.27   0.43  1698    1</span>
+<span class="co">## beta[10]   0.29    0.01 0.60  -0.44   0.27   1.04  2193    1</span>
+<span class="co">## beta[11]  -0.84    0.02 0.86  -1.96  -0.74   0.16  2318    1</span>
+<span class="co">## beta[12]  -0.09    0.02 0.72  -0.99  -0.06   0.77  1873    1</span>
+<span class="co">## beta[13]   1.59    0.02 0.73   0.68   1.57   2.54  1674    1</span>
+<span class="co">## beta[14]  -0.26    0.01 0.64  -1.09  -0.23   0.49  2173    1</span>
+<span class="co">## beta[15]  -0.39    0.01 0.60  -1.21  -0.34   0.33  2208    1</span>
+<span class="co">## beta[16]  -1.15    0.03 1.26  -2.75  -0.99   0.24  2457    1</span>
+<span class="co">## beta[17]   0.48    0.00 0.26   0.17   0.47   0.82  2674    1</span>
+<span class="co">## </span>
+<span class="co">## Samples were drawn using NUTS(diag_e) at Tue Mar  1 23:48:57 2022.</span>
+<span class="co">## For each parameter, n_eff is a crude measure of effective sample size,</span>
+<span class="co">## and Rhat is the potential scale reduction factor on split chains (at </span>
+<span class="co">## convergence, Rhat=1).</span></code></pre>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
