@@ -6,9 +6,9 @@ Repository for package accompanying paper "Explaining Recruitment to Violent Ext
 
 The goal of this package is to make it easy for the user to:
 
-1. Prepare data for estimation procedure (`data.prep()`)
-2. Estimate Bayesian case-control models (`fit()`)
-3. Simulate example data (`dgf()`)
+1. **Prepare** data for estimation procedure (`data.prep()`)
+2. **Estimate** Bayesian case-control models (`fit()`)
+3. **Simulate** example data (`dgf()`)
 
 You can begin using the package by loading into memory using:
 

@@ -1,8 +1,8 @@
 ---
-title: "Prepare"
+title: "1. Prepare"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEnry{Prepare}
+  %\VignetteIndexEntry{1. Prepare}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

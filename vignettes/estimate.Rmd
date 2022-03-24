@@ -1,8 +1,8 @@
 ---
-title: "Estimate"
+title: "2. Estimate"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEnry{Estimate}
+  %\VignetteIndexEntry{2. Estimate}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
