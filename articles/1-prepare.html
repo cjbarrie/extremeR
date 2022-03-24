@@ -41,8 +41,8 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/estimate.html">2. Estimate</a>
-    <a class="dropdown-item" href="../articles/prepare.html">1. Prepare</a>
+    <a class="dropdown-item" href="../articles/1-prepare.html">1. Prepare</a>
+    <a class="dropdown-item" href="../articles/2-estimate.html">2. Estimate</a>
   </div>
 </li>
       </ul>
@@ -66,14 +66,14 @@
 
 
 
-<script src="prepare_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="prepare_files/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="prepare_files/pagedtable-1.1/js/pagedtable.js"></script><div class="row">
+<script src="1-prepare_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="1-prepare_files/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="1-prepare_files/pagedtable-1.1/js/pagedtable.js"></script><div class="row">
   <main id="main"><div class="page-header">
       <img src="" class="logo" alt=""><h1>1. Prepare</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/cjbarrie/extremeR/blob/HEAD/vignettes/prepare.Rmd" class="external-link"><code>vignettes/prepare.Rmd</code></a></small>
-      <div class="d-none name"><code>prepare.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/cjbarrie/extremeR/blob/HEAD/vignettes/1-prepare.Rmd" class="external-link"><code>vignettes/1-prepare.Rmd</code></a></small>
+      <div class="d-none name"><code>1-prepare.Rmd</code></div>
     </div>
 
     
@@ -138,7 +138,7 @@ Here we see that our observations are labelled as either “0” if a control or
 </div>
 <p>The shapefile data is plotted below. The relevant geographic identifiers we’ll be using in the shapefile are “ADM1_EN” for the large area and “ADM2_EN” for the small area.</p>
 <p>We’ll then be merging with the “ADM2_PCODE” identifier, as this is the common identifier between our shapefile and case-control data.</p>
-<p><img src="prepare_files/figure-html/unnamed-chunk-8-1.png" width="700"></p>
+<p><img src="1-prepare_files/figure-html/unnamed-chunk-8-1.png" width="700"></p>
 <p>Finally, we need to input information on the known prevalence of the outcome in the population of interest. For this, we need to know the relevant population denominator. In the ERVE example, this is the adult male Sunni population.</p>
 These data are also bundled into the package, and we can look at them below.
 <div data-pagedtable="false">
