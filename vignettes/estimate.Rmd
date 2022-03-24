@@ -24,10 +24,11 @@ First install the package from source if not already installed.
 devtools::install_github("cjbarrie/extremeR")
 ```
 
-We then load the package into memory as follows.
+We then load the package into memory as follows. We will also be using several functions from the `rstan` package. 
 
 ```{r, warning = F, message = F}
 library(extremeR)
+library(rstan)
 ```
 
 ## Load data
@@ -46,7 +47,7 @@ load("data/data.list.rda")
 
 And we are then ready to estimate the ERVE model for the Egyptian case-control data.
 
-The `fitp()` function has a series of parameters that we tabulate and describe below.
+The `fit()` function has a series of parameters that we tabulate and describe below.
 
 | Argument   |     Description      |
 |----------|:-------------:|
@@ -84,4 +85,48 @@ fit_object = fit(
   control = list(max_treedepth = 25, adapt_delta = 0.99),
   verbose = T
 )
+```
+
+## Check MCMC convergence
+
+We can then check the summary convergence statistics by using the `monitor()` function in `rstan`.
+
+```{r, eval = F}
+mon_egypt <- rstan::monitor(rstan::extract(fit_object, permuted = FALSE, inc_warmup = TRUE))
+```
+
+```{r, echo = F}
+load("data/mon_egypt.rda")
+```
+
+And we could inspect the output for, e.g., the $\hat{R}$ values as follows.
+
+```{r}
+rhats <- mon_egypt$Rhat
+plot(rhats)
+```
+
+## Inspect output
+
+And we are able to access the estimated parameters of the "stanfit" object by using the `extract()` function in `rstan`. 
+
+```{r, eval = F}
+betas_egypt <- rstan::extract(fit_object ,
+                           pars = c('beta'),
+                           permuted = TRUE,
+                           inc_warmup = FALSE,
+                           include = TRUE)
+```
+
+Or printing from the fit object directly. 
+
+```{r, eval = F}
+print(fit_object, pars=c("beta"), probs=c(.1,.5,.9))
+```
+
+```{r, echo = F}
+# printbetas <- paste0(capture.output(print(fit_object, pars=c("beta"), probs=c(.1,.5,.9))), collapse = "\n")
+# save(printbetas, file = "vignettes/data/printbetas.rda")
+load("data/printbetas.rda")
+cat(printbetas)
 ```

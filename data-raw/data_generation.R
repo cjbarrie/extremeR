@@ -76,3 +76,27 @@ data.list =
   )
 
 usethis::use_data(data.list, overwrite = T)
+
+##get monitor object for fit() example
+
+fit_object = fit(
+  data = data.list,
+  show_code = T,
+  contamination = T,
+  offset = T,
+  beta_prior = "cauchy",
+  small_area_prior = "BYM2",
+  intercept_scale = 10,
+  large_area_prior = "random",
+  iter = 25000,
+  warmup = 22500,
+  thin = 4,
+  cores = 4,
+  chains = 4,
+  control = list(max_treedepth = 25, adapt_delta = 0.99),
+  verbose = T
+)
+
+mon_egypt <- rstan::monitor(rstan::extract(fit_object, permuted = FALSE, inc_warmup = TRUE))
+
+usethis::use_data(mon_egypt, overwrite = T)

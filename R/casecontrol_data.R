@@ -21,3 +21,14 @@
 #'
 #'
 "data.list"
+
+#' Monitor object from `rstan::mon()` of class "simsummary" "data.frame"
+#'
+#' Data from generated fit object output of `fit()` estimation procedure
+#'
+#'
+"mon_egypt"
+
+
+
+
