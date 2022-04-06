@@ -39,10 +39,10 @@
   <a class="nav-link" href="reference/index.html">Reference</a>
 </li>
 <li class="nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="articles/1-prepare.html">1. Prepare</a>
-    <a class="dropdown-item" href="articles/2-estimate.html">2. Estimate</a>
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-vignettes">Vignettes</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-vignettes">
+    <a class="dropdown-item" href="articles/pkgdown/1-prepare.html">1. Prepare</a>
+    <a class="dropdown-item" href="articles/pkgdown/2-estimate.html">2. Estimate</a>
   </div>
 </li>
       </ul>
@@ -77,8 +77,6 @@
 <strong>Prepare</strong> data for estimation procedure (<code><a href="reference/data.prep.html">data.prep()</a></code>)</li>
 <li>
 <strong>Estimate</strong> Bayesian case-control models (<code><a href="reference/fit.html">fit()</a></code>)</li>
-<li>
-<strong>Simulate</strong> example data (<code><a href="reference/dgf.html">dgf()</a></code>)</li>
 </ol>
 <p>You can begin using the package by loading into memory using:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
@@ -88,11 +86,10 @@
 <h2 id="getting-started">Getting started<a class="anchor" aria-label="anchor" href="#getting-started"></a>
 </h2>
 <pre class="{r}"><code><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/cjbarrie/extremeR" class="external-link">extremeR</a></span><span class="op">)</span></code></pre>
-<p>There are three principal <tt>extremeR</tt> functions.</p>
+<p>There are two principal <tt>extremeR</tt> functions.</p>
 <ul>
 <li>Preparing the data is achieved with <code><a href="reference/data.prep.html">data.prep()</a></code>, which allows the user to bundle the main relevant data source (case-control data and shapefile data) into a list object for estimation.</li>
 <li>Estimating models with different specifications is achieved with <code><a href="reference/fit.html">fit()</a></code>, which allows the user to estimate models described in the associated article, and to specify hierarchical structure, priors, contamination layer etc.</li>
-<li>Simulating example data is achieved with <code><a href="reference/dgf.html">dgf()</a></code>, which allows the user to simulate case-control data with specified spatial structure and level of spatial autocorrelation—among other parameters—and test model fit.</li>
 </ul>
 </div>
 </div>
