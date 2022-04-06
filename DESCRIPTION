@@ -19,6 +19,7 @@ Authors@R:
 	         comment = c(ORCID = "0000-ANON-ANON-ANON")))
 Description: Estimates Bayesian Case-Control technique described in "Explaining Recruitment to Violent Extremism: A Bayesian Case-Control Approach."
 URL: https://anonymous.4open.science/r/extremeR/
+BugReports: https://anonymous.4open.science/r/extremeR/
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

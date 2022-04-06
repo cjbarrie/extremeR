@@ -12,7 +12,7 @@ The goal of this package is to make it easy for the user to:
 You can begin using the package by loading into memory using:
 
 ```r
-devtools::install_github("cjbarrie/extremeR")
+devtools::install_github("ANON/extremeR")
 ```
 
 ## Getting started

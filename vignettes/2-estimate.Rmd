@@ -21,7 +21,7 @@ This explainer vignette walks you through the second of these two steps.
 First install the package from source if not already installed.
 
 ```{r, eval =FALSE}
-devtools::install_github("cjbarrie/extremeR")
+devtools::install_github("ANON/extremeR")
 ```
 
 We then load the package into memory as follows. We will also be using several functions from the `rstan` package. 
