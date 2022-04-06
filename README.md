@@ -23,5 +23,5 @@ library(extremeR)
 
 There are two principal <tt>extremeR</tt> functions.
 
-* Preparing the data is achieved with `data.prep()`, which allows the user to bundle the main relevant data source (case-control data and shapefile data) into a list object for estimation. 
-* Estimating models with different specifications is achieved with `fit()`, which allows the user to estimate models described in the associated article, and to specify hierarchical structure, priors, contamination layer etc.
+* **Preparing** the data is achieved with `data.prep()`, which allows the user to bundle the main relevant data source (case-control data and shapefile data) into a list object for estimation. 
+* **Estimating** models with different specifications is achieved with `fit()`, which allows the user to estimate models described in the associated article, and to specify hierarchical structure, priors, contamination layer etc.
