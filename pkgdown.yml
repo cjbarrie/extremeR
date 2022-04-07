@@ -4,8 +4,8 @@ pkgdown_sha: ~
 articles:
   1-prepare: 1-prepare.html
   2-estimate: 2-estimate.html
-last_built: 2022-04-06T17:11Z
+last_built: 2022-04-07T10:08Z
 urls:
-  reference: https://http://extremer.info/reference
-  article: https://http://extremer.info/articles
+  reference: https://extremer.info/index.html/reference
+  article: https://extremer.info/index.html/articles
 
