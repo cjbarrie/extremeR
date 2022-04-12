@@ -13,6 +13,9 @@ addnbs <- function(sp.sample,ID,D){
   return(queen_nb)
 }
 
+# The following function comes from the file 'nb_data_utils.R', created by Mitzi Morris.
+# Source: https://github.com/stan-dev/example-models/blob/master/knitr/car-iar-poisson/nb_data_funs.R
+
 # nb2graph
 #
 # input: nb_object
@@ -44,38 +47,10 @@ nb2graph = function(x) {
     }
   }
   return (list("N"=N,"N_edges"=N_edges,"node1"=node1,"node2"=node2));
-}# nb2graph
-#
-# input: nb_object
-# returns: dataframe containing num nodes, num edges,
-#          and a list of graph edges from node1 to node2.
-#
-nb2graph = function(x) {
-  N = length(x);
-  n_links = 0;
-  for (i in 1:N) {
-    if (x[[i]][1] != 0) {
-      n_links = n_links + length(x[[i]]);
-    }
-  }
-  N_edges = n_links / 2;
-  node1 = vector(mode="numeric", length=N_edges);
-  node2 = vector(mode="numeric", length=N_edges);
-  idx = 0;
-  for (i in 1:N) {
-    if (x[[i]][1] > 0) {
-      for (j in 1:length(x[[i]])) {
-        n2 = unlist(x[[i]][j]);
-        if (i < n2) {
-          idx = idx + 1;
-          node1[idx] = i;
-          node2[idx] = n2;
-        }
-      }
-    }
-  }
-  return (list("N"=N,"N_edges"=N_edges,"node1"=node1,"node2"=node2));
 }
+
+# The following function comes from the file 'nb_data_utils.R', created by Mitzi Morris.
+# Source: https://github.com/stan-dev/example-models/blob/master/knitr/car-iar-poisson/nb_data_funs.R
 
 # scale_nb_components
 #
@@ -114,6 +89,9 @@ scale_nb_components = function(x) {
   }
   return(scales);
 }
+
+# The following function comes from the file 'nb_data_utils.R', created by Mitzi Morris.
+# Source: https://github.com/stan-dev/example-models/blob/master/knitr/car-iar-poisson/nb_data_funs.R
 
 # nb2subgraph
 # for a given subcomponent, return graph as lists of node1, node2 pairs
@@ -156,6 +134,9 @@ nb2subgraph = function(x, c_id, comp_ids, offsets) {
   return (list("node1"=node1,"node2"=node2));
 }
 
+# The following function comes from the file 'nb_data_utils.R', created by Mitzi Morris.
+# Source: https://github.com/stan-dev/example-models/blob/master/knitr/car-iar-poisson/nb_data_funs.R
+
 # indexByComponent
 #
 # input: vector of component ids
@@ -182,10 +163,16 @@ indexByComponent = function(x) {
 # utils
 inv_logit = function(x){exp(x)/(1+exp(x))}
 
+# The following function comes from the file 'nb_data_utils.R', created by Mitzi Morris.
+# Source: https://github.com/stan-dev/example-models/blob/master/knitr/car-iar-poisson/nb_data_funs.R
+
 # check that graph is fully connected
 isDisconnected = function(x) {
   return(n.comp.nb(x)[[1]] > 1);
 }
+
+# The following function comes from the file 'nb_data_utils.R', created by Mitzi Morris.
+# Source: https://github.com/stan-dev/example-models/blob/master/knitr/car-iar-poisson/nb_data_funs.R
 
 # test if nb object is fully connected
 testconnected <- function(nb_object) {
@@ -199,6 +186,9 @@ testconnected <- function(nb_object) {
 
 
 ############# OPTIONALLY INCLUDED
+
+# The following function comes from the file 'nb_data_utils.R', created by Mitzi Morris.
+# Source: https://github.com/stan-dev/example-models/blob/master/knitr/car-iar-poisson/nb_data_funs.R
 
 # orderByComp
 # given nbObject, reorder nb object so that all components are contiguous
@@ -266,6 +256,8 @@ orderByComponent = function(x) {
   return(list(new_nb,rMap));
 }
 
+# The following function comes from the file 'nb_data_utils.R', created by Mitzi Morris.
+# Source: https://github.com/stan-dev/example-models/blob/master/knitr/car-iar-poisson/nb_data_funs.R
 
 # reorderVector
 #
@@ -283,6 +275,8 @@ reorderVector = function(x, rMap) {
   return(result);
 }
 
+# The following function comes from the file 'nb_data_utils.R', created by Mitzi Morris.
+# Source: https://github.com/stan-dev/example-models/blob/master/knitr/car-iar-poisson/nb_data_funs.R
 
 # reorderMatrix
 #
@@ -317,6 +311,9 @@ add_specific_nbs <- function(nb,name1,name2,IDs){
   nb[[which(IDs==name2)]] = sort(c(nb[[which(IDs==name2)]],which(IDs==name1)))
   return(nb)
 }
+
+# The following function comes from the file 'nb_data_utils.R', created by Mitzi Morris.
+# Source: https://github.com/stan-dev/example-models/blob/master/knitr/car-iar-poisson/nb_data_funs.R
 
 # validateNb
 # check that nbObject is symmetric, has connected components
