@@ -13,5 +13,6 @@ testconnected(nb_object)
 
 }
 \description{
-Test if nb object is fully connected
+Test if nb object is fully connected. Created by Mitzi Morris.
+@seealso \url{https://github.com/stan-dev/example-models/blob/master/knitr/car-iar-poisson/nb_data_funs.R}
 }
