@@ -52,6 +52,7 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">fit</span><span class="op">(</span>
   data <span class="op">=</span> <span class="va">data_sim</span>,
   contamination <span class="op">=</span> <span class="cn">F</span>,
+  show_code <span class="op">=</span> <span class="cn">T</span>,
   offset <span class="op">=</span> <span class="cn">F</span>,
   beta_prior <span class="op">=</span> <span class="st">"normal"</span>,
   small_area_prior <span class="op">=</span> <span class="st">"fixed"</span>,
@@ -73,6 +74,8 @@
 <dd><p>list, survey and shapefile combined list object created with the data.prep() function.</p></dd>
 <dt>contamination</dt>
 <dd><p>logical, should the model include the Rota et al. (2013) style contamination layer? Defaults to <code>TRUE</code>.</p></dd>
+<dt>show_code</dt>
+<dd><p>logical, should the stan code print on the screen at the end of the run? Defaults to <code>TRUE</code>.</p></dd>
 <dt>offset</dt>
 <dd><p>logical, should the model include a King and Zeng (2001) style offset ? if contamination is also specified, this will be a contaminated-offset. Defaults to <code>TRUE</code>.</p></dd>
 <dt>beta_prior</dt>
@@ -97,8 +100,6 @@
 <dd><p>list; tree depth and adapt delta; see <code>?stan</code> for further information.</p></dd>
 <dt>verbose</dt>
 <dd><p>logical, print full stan output? Defaults to <code>TRUE</code>.</p></dd>
-<dt>show_code</dt>
-<dd><p>logical, should the stan code print on the screen at the end of the run? Defaults to <code>TRUE</code>.</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
