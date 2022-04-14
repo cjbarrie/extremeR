@@ -33,7 +33,7 @@ reference:
   - mon_egypt
 - title: Helper functions
   desc: |
-    Helper functions to check graph connected
+    Helper functions to check graph connected. Created by Mitzi Morris [here]*(https://github.com/stan-dev/example-models/blob/master/knitr/car-iar-poisson/nb_data_funs.R)
   contents:
   - testconnected
   - isdisconnected
