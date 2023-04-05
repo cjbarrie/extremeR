@@ -17,7 +17,7 @@ Authors@R:
 	         role = c("ctb"),
 	         email = "neil.ketchley@politics.ox.ac.uk",
 	         comment = c(ORCID = "0000-0001-5413-2664")))
-Description: Estimates Bayesian Case-Control technique described in "Explaining Recruitment to Violent Extremism: A Bayesian Case-Control Approach."
+Description: Estimates Bayesian Case-Control technique described in "Explaining Recruitment to Violent Extremism: A Bayesian Hierarchical Case-Control Approach."
 URL: https://extremer.info/index.html
 BugReports: https://github.com/cjbarrie/extremeR/issues/
 License: MIT + file LICENSE

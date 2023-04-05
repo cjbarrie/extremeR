@@ -1,0 +1,14 @@
+citHeader("To cite extremeR in publications use:")
+
+bibentry(bibtype = "Article",
+         title   = "Explaining Recruitment to Extremism: A Bayesian Hierarchical Case-Control Approach",
+         year    = 2023,
+         author  = c(
+             person('Roberto', 'Cerina', email = 'r.cerina@maastrichtuniversity.nl'),
+             person('Christopher', 'Barrie'),
+             person('Neil', 'Ketchley'),
+             person('Aaron', 'Zelin')
+         ),
+         journal = 'Political Analysis',
+         doi = ''
+)
