@@ -1,5 +1,5 @@
 Package: extremeR
-Title: A Bayesian Case-Control Approach for Analyzing Extreme Behavior
+Title: A Bayesian Hierarchical Case-Control Methods for Analyzing Extreme Behavior
 Version: 0.0.0.9000
 Authors@R: 
     c(person(given = "Christopher",
@@ -18,7 +18,8 @@ Authors@R:
 	         email = "neil.ketchley@politics.ox.ac.uk",
 	         comment = c(ORCID = "0000-0001-5413-2664")))
 Description: Estimates Bayesian Case-Control technique described in "Explaining Recruitment to Violent Extremism: A Bayesian Case-Control Approach."
-URL: https://github.com/cjbarrie/extremeR
+URL: https://github.com/cjbarrie/extremeR,
+    https://extremer.info/
 BugReports: https://github.com/cjbarrie/extremeR/issues/
 License: MIT + file LICENSE
 Encoding: UTF-8
