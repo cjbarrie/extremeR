@@ -2,7 +2,7 @@
 #'
 #' Function to estimate a Bayesian case-control model.
 #'
-#' @param data # list, survey and shapefile combined list object created with the `data.prep()` function.
+#' @param data list, survey and shapefile combined list object created with the `data.prep()` function.
 #' @param show_code logical, should the stan code print on the screen at the end of the run? Defaults to `TRUE`.
 #' @param contamination logical, should the model include the Rota et al. (2013) style contamination layer? Defaults to `TRUE`.
 #' @param offset logical, should the model include a King and Zeng (2001) style offset ? if contamination is also specified, this will be a contaminated-offset. Defaults to `TRUE`.

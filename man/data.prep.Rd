@@ -56,9 +56,6 @@ data.prep(
 
 \item{large_area_shape}{logical, should the function return a large-area shapefile? Defaults to \code{TRUE}.}
 }
-\value{
-
-}
 \description{
 Prepare data in format required for estimation procedure described in "Explaining Recruitment to Violent Extremism: A Bayesian Case-Control Approach.
 }

@@ -9,9 +9,6 @@ isdisconnected(x)
 \arguments{
 \item{x}{nb object}
 }
-\value{
-
-}
 \description{
 Test if nb object is disconnected
 }

@@ -23,7 +23,7 @@ fit(
 )
 }
 \arguments{
-\item{data}{list, survey and shapefile combined list object created with the data.prep() function.}
+\item{data}{list, survey and shapefile combined list object created with the \code{data.prep()} function.}
 
 \item{contamination}{logical, should the model include the Rota et al. (2013) style contamination layer? Defaults to \code{TRUE}.}
 
@@ -52,9 +52,6 @@ fit(
 \item{control}{list; tree depth and adapt delta; see \code{?stan} for further information.}
 
 \item{verbose}{logical, print full stan output? Defaults to \code{TRUE}.}
-}
-\value{
-
 }
 \description{
 Function to estimate a Bayesian case-control model.
