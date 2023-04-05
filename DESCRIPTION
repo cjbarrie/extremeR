@@ -46,6 +46,7 @@ Imports:
     raster
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    extremeR
 LazyData: true
 VignetteBuilder: knitr
